@@ -1,0 +1,27 @@
+#bar {
+    text-align: center;
+    color: white;
+    width: 100%;
+    background-color: #7c7c7c;
+    padding: 10px;
+}
+
+#navBar {
+    background-color: #7bb98d;
+    margin: 0;
+}
+
+#navBar ul {
+    text-align: center;
+}
+
+#navBar li {
+    display: inline-block;
+    position: relative;
+    padding: 10px;    
+}
+
+#navBar li:hover {
+    background-color: #7c7c7c;
+    color: white;
+}
