@@ -1,10 +1,31 @@
-<div class="home-form"></div>
-    <form onsubmit = "getMyLyrics(); return false" >
-        <label for = "artist">Artist</label><br>
-        <input type = "text" id="artist" value=""><br><br>
-        <label for = "song">Song</label><br>
-        <input type = "text" id="song" value=""><br><br>
-        <input type = "submit" value="Submit" id = "mySubmit">
-    </form>
-    <button class="form-submit" role="button"></button>
-</div>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="font-size: 30px; color: #194528;">Welcome!</h1>
+    <h2 style="font-size: 24px; color: #3a6736;">Pick a song, any song.</h2>
+    <div class="home-form">
+        <form onsubmit = "getMyLyrics(); return false" >
+            <label for = "artist">Artist</label><br>
+            <input type = "text" id="artist" value=""><br><br>
+            <label for = "song">Song</label><br>
+            <input type = "text" id="song" value=""><br><br>
+            <input type = "submit" value="Submit" id = "mySubmit">
+        </form>
+        <button class="form-submit" role="button">Button</button>
+    </div>
+
+    <div id="slider">
+        <figure>
+            <div>Slide 1</div>
+            <div>Slide 2</div>
+            <div>Slide 3</div>
+        </figure>
+    </div>
+
+    <script src="INST377_apiTest.js"></script>
+</body>
+</html>
