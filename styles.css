@@ -1,10 +1,9 @@
 #slider { 
     margin: 0 auto;
     overflow: hidden;
-    width: 500;
-    height: 250;
+    width: 500px;
+    height: 250px;
     position: relative;
-    
 }
 
 #slider figure {
@@ -19,7 +18,7 @@
     float: left;
     width: 200px;
     height: 200px;
-    margin: 100 auto;
+    margin: 100px auto;
     background-color: aqua;
     padding: 20px;
     font-size: 30px;
@@ -31,3 +30,44 @@
     from{transform: translateX(0)}
     to{transform: translateX(-12000px)}
 }
+
+.home-form {
+    max-width: 400px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+}
+
+.form-submit {
+    background-color: #badef2;
+    border: 2px solid #1f3f5e;
+    border-radius: 30px;
+    box-shadow: #1b3c5a 4px 4px 0 0;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:active {
+    background-color: #f0f0f0;
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
