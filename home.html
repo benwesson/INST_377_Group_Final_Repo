@@ -7,15 +7,15 @@
 <body>
     <h1 style="font-size: 30px; color: #194528;">Welcome!</h1>
     <h2 style="font-size: 24px; color: #3a6736;">Pick a song, any song.</h2>
+
     <div class="home-form">
-        <form onsubmit = "getMyLyrics(); return false" >
-            <label for = "artist">Artist</label><br>
-            <input type = "text" id="artist" value=""><br><br>
-            <label for = "song">Song</label><br>
-            <input type = "text" id="song" value=""><br><br>
-            <input type = "submit" value="Submit" id = "mySubmit">
+        <form onsubmit="getMyLyrics(); return false;">
+            <label for="artist">Artist</label><br>
+            <input type="text" id="artist" class="form-input" value=""><br><br>
+            <label for="song">Song</label><br>
+            <input type="text" id="song" class="form-input" value=""><br><br>
+            <input type="submit" value="Submit" id="mySubmit" class="form-submit">
         </form>
-        <button class="form-submit" role="button">Button</button>
     </div>
 
     <div id="slider">
