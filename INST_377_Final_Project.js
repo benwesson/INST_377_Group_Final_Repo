@@ -1,57 +1,48 @@
 
-function getMyLyrics() {
-    //const myArtist = "The Weeknd"
-    //const mySongName = "Blinding Lights"
-    const myArtist = document.getElementById("artist").value;
-    const mySongName = document.getElementById("song").value;
+const supabaseClient = require('@supabase/supabase-js')
+const bodyParser = require('body-parser')
+const express = require('express')
 
-    
-    
-    fetch(`https://api.lyrics.ovh/v1/${myArtist}/${mySongName}`)
-    
-    //document.getElementById("images1").appendChild("p").innerHTML = "hi"
-    .then((res) => res.json())
-    .then((data) => {
-        
-        
-        console.log(data.lyrics)
-        let myString = data.lyrics
-        //let myTestString = myString.split("")
-        let mySplitString = myString.split("\n")
-        //document.getElementById("lyricText").innerHTML = myString
-        //console.log(myString.split("\n"))
-        let myArray = mySplitString
-        console.log(myArray)
-        
-        for (item in myArray) {
-            let x = document.createElement("div")
-            x.setAttribute("id", "mySlide")
-            let y = document.createElement("p")
-            y.innerHTML = myArray[item] 
-            x.append(y)
-            document.getElementById("imageHolder").append(x);
-            
-        }
-        
-            
-            //document.getElementById("images0").innerHTML = myArray[1]
-            
-        
-       
+const app = express()
+const port = 3000
 
-        
+app.use(bodyParser.json())
+app.use(express.static(__dirname + '/public'))
 
 
-        for (item in myArray) {
-            
-            document.getElementById("lyricText").innerHTML += (myArray[item] + "<br>")
+const supabaseURL = 'https://xcqomanymtwmoryencyb.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjcW9tYW55bXR3bW9yeWVuY3liIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3MjU1MzksImV4cCI6MjAzMTMwMTUzOX0.C80pmSb4MB-sgwSeTniLDaydtduQdlEFSqhNTc9rizc'
+const supabase = supabaseClient.createClient(supabaseURL, supabaseKey)
 
-            
-            //document.getElementById("images1").innerHTML += (myArray[0] + "<br>")
-        }
-        
-        
-    })
 
+app.get('/spotifylyrics', async (req, res) => {
+    console.log('Attempting to GET all lyrics')
+
+
+    const {data, error } = await supabase
+        .from('SpotifyLyrics')
+        .select()
+
+
+    if(error) {
+        console.log('Error');
+        res.send(error);
+    } else {
+        res.send(data);
+        console.log(data.slice(-2));
+
+    }
 }
+)
+
+
+
+
+
+
+
+app.listen(port, () => {
+    console.log('APP IS ALIVE')
+})
+
 
