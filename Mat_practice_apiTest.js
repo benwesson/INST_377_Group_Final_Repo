@@ -45,7 +45,7 @@ function getMyLyrics() {
 async function fetchSongs() {
     const response = await fetch('/api/songs');
     const songs = await response.json();
-    console.log(songs);
+    console.log(Songs);
 }
 
 async function addSong() {
