@@ -17,7 +17,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 
 app.get('/api/songs', async (req, res) => {
-    const { data, error } = await supabase.from('songs').select('*');
+    const { data, error } = await supabase.from('Songs').select('*');
     if (error) {
         return res.status(500).json({ error: error.message });
     }
