@@ -1,0 +1,18 @@
+{
+  "name": "whatever",
+  "version": "1.0.0",
+  "description": "Supabase App",
+  "main": "INST_377_Final_Project.js",
+  "scripts": {
+    "start": "nodemon -e '*'"
+  },
+  "author": "Jason Rahimi",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.2",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {}
+}
