@@ -46,13 +46,13 @@
             const projectInfo = document.getElementById("projectInfo");
 
             if (inputName === 'project') {
-                fetch('project_info.txt')
+                fetch('project_info.rtf')
                     .then(response => response.text())
                     .then(data => {
                         projectInfo.innerHTML = data;
                     });
             } else {
-                fetch('team_members.txt')
+                fetch('team_members.rtf')
                     .then(response => response.text())
                     .then(data => {
                         if (teamMembers.hasOwnProperty(inputName)) {
