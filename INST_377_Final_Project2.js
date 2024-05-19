@@ -1,48 +1,65 @@
-function getMostRecent() {
+async function getMostRecent() {
+    
     const apiURL = 'http://localhost:3000/spotifylyrics'
-    fetch(apiURL)
+    await fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
     let dataLength = data.length;
     const songTable = document.getElementById('songTable'); 
+
+    while (songTable.hasChildNodes()) {
+        songTable.removeChild(songTable.firstChild);
+    }
+
+    const headers = document.createElement('tr');
+    const songTitleHeader = document.createElement('th');
+    const artistNameHeader = document.createElement('th');
+    songTitleHeader.innerHTML = 'Song Title';
+    artistNameHeader.innerHTML = 'Artist Name';
+    headers.appendChild(songTitleHeader);
+    headers.appendChild(artistNameHeader);
+    songTable.appendChild(headers);
+
         for (let i = dataLength - 5; i < dataLength; i++) {
 
-            tr = document.createElement('tr');
-            songtitle = document.createElement('td')
-            artistname = document.createElement('td')
+            var tr = document.createElement('tr');
+            var songtitle = document.createElement('td')
+            var artistname = document.createElement('td')
             songtitle.innerHTML = data[i].SongTitle;
             artistname.innerHTML = data[i].ArtistName;
             tr.appendChild(songtitle);
             tr.appendChild(artistname);
             songTable.appendChild(tr);
         }
+
+
+        document.getElementById("songTable").style.visibility = "visible"
 });    
 }
 
+
 async function sendData() {
-    console.log('data sender');
     let artistName = document.getElementById('artist').value;
     let songTitle = document.getElementById('song').value;
-    console.log(songTitle);
     const apiURL = 'http://localhost:3000/spotifylyrics'
     await fetch(apiURL, {
         method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
- },
  body: JSON.stringify({
     ArtistName: artistName,
     SongTitle: songTitle
- })
+ }),
+     headers: {
+        'Content-Type': 'application/json'
+ }
  } ) 
  .then(response => response.json())
  .then(data => {
-    console.log(data);
  })
 }
 
-
+function showMyLyrics() {
+    document.getElementById("lyricText").style.visibility = "visible"
+}
 
 
 function getMyLyrics() {
