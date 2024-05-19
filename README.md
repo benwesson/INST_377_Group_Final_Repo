@@ -1,4 +1,8 @@
 # INST_377_Group_Final_Repo
+
+## Vercel Link
+https://inst-377-group-final-repo-lyart.vercel.app/
+
 ## Table of Contents
 - [Project Description](#project-description)
 - [Target Browsers](#target-browsers)
@@ -21,7 +25,6 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
 - Chrome
 - Firefox
 - 
-- 
 ## Link to Developer Manual
 [Developer Manual](README.md)
 
@@ -43,10 +46,6 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
 3. Install dependencies:
     ```bash
     npm install
-    npm install express
-    npm install nodemon
-    npm install @supabase/supabase-js
-    npm install body-parser
     npm install express
     npm install nodemon
     npm install @supabase/supabase-js
