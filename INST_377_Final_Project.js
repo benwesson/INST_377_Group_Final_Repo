@@ -6,6 +6,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
 
@@ -13,6 +14,12 @@ app.use(express.static(__dirname + '/public'))
 const supabaseURL = 'https://xcqomanymtwmoryencyb.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjcW9tYW55bXR3bW9yeWVuY3liIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3MjU1MzksImV4cCI6MjAzMTMwMTUzOX0.C80pmSb4MB-sgwSeTniLDaydtduQdlEFSqhNTc9rizc'
 const supabase = supabaseClient.createClient(supabaseURL, supabaseKey)
+
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+  });
 
 
 app.get('/spotifylyrics', async (req, res) => {
