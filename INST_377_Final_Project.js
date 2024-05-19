@@ -64,5 +64,3 @@ app.post('/spotifylyrics', async (req, res) => {
 app.listen(port, () => {
     console.log('APP IS ALIVE')
 })
-
-
