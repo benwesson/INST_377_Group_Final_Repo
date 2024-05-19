@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="INST_377_Final_Project.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/sheryjs@1.0.0-beta.0.1.7/dist/Shery.js"></script>
     <title>Document</title>
     <style>
         #slider {
@@ -31,8 +28,8 @@
             }
             #slider figure div {
                 float: left;
-                width: 180px;
-                height: 180px;
+                width: 200px;
+                height: 200px;
                 margin: 100 auto;
                 background-color: #a4dfab;
                 padding: 20px;
@@ -51,19 +48,9 @@
 
 
 <body>
-     <header id="bar">
-        <h1 class="bar">Find My Song</h1>
+    <header id = "bar">
+        <h1>Find My Song</h1>
     </header>
-    <script>
-        Shery.textAnimate(".bar", {
-            style: 1,
-            y: 10,
-            delay: 0.1,
-            duration: 4,
-            ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-            multiplier: 0.1,
-        });
-    </script>
 
     <nav>
         <ul>
@@ -92,7 +79,6 @@
             <label id = "songLabel">Song</label><br>
             <input type = "text" id="song" value=""><br><br>
             
-            <!--<input type="button" onclick="getMyLyrics(); sendData(); return false" class="form-submit" id="submitButton">-->
             <button class="form-submit" id="submitButton" onclick="getMyLyrics(); sendData(); return false">Submit</button>
         </form>
 
@@ -100,24 +86,28 @@
     
    
 
-    <p>Click the button below to list the 5 most recently searched song lyrics.</p>
+    <h2>Click the button below to either list the 5 most recently searched song lyrics.</h2>
 
-    
+
+
     <form onsubmit="getMostRecent(); return false">
     <input type = "submit" value="Show Table" id="mySubmit">
     
     </form>
-    <br>
+
+
     <br>
 
+    <table id="songTable"></table>
+
+    <br>
+
+    <h2>Click the button below to display the full lyrics.</h2>
     <form onsubmit="showMyLyrics(); return false">
         <input type = "submit" value="Show Full Lyrics" id="mySubmit">
         
         </form>
-    <br>
-    <br>
 
-    <table id="songTable"></table>
 
     <div>
         <p id = "lyricText">
@@ -127,46 +117,8 @@
     </div>
   
     <script>
-        const teamMembers = {
-            "Jenny Lee": "Current senior. Majoring in information science and minoring in sociology.",
-            "Ben Wesson": "a guy.",
-            "David Adams": "a fella.",
-            "Jason Rahimi": "a dude.",
-            "Matthew Jun": "another guy."
-        };
-    
-        let typeItInstance = null;
-    
-        document.getElementById("submitButton").addEventListener("click", function() {
-            const inputName = document.getElementById("teamMemberInput").value;
-            const teamMemberInfo = document.getElementById("teamMemberInfo");
-    
-            if (teamMembers.hasOwnProperty(inputName)) {
-                if (typeItInstance !== null) {
-                    typeItInstance.destroy();
-                }
-                teamMemberInfo.innerHTML = ""; 
-                typeItInstance = new TypeIt("#teamMemberInfo", {
-                    strings: [teamMembers[inputName]],
-                    speed: 75,
-                    loop: false,
-                    cursorChar: '|'
-                }).go();
-            } else {
-                teamMemberInfo.innerHTML = ""; 
-                if (typeItInstance !== null) {
-                    typeItInstance.destroy();
-                }
-                typeItInstance = new TypeIt("#teamMemberInfo", {
-                    strings: ["No-can-do's-ville, babydoll."],
-                    speed: 75,
-                    loop: true,
-                    cursorChar: '|'
-                }).go();
-            }
-        });
         typeItInstance = new TypeIt("#teamMemberInfo", {
-            strings: ["Enter an artist name and song name!"],
+            strings: ["Enter an artist name and song title!"],
             speed: 75,
             loop: true,
             cursorChar: '|'
