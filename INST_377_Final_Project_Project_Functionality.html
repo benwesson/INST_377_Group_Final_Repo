@@ -86,24 +86,28 @@
     
    
 
-    <p>Click the buttons below to either list the 5 most recently searched song lyrics or display the full lyrics.</p>
+    <h2>Click the button below to either list the 5 most recently searched song lyrics.</h2>
 
-    
+
+
     <form onsubmit="getMostRecent(); return false">
     <input type = "submit" value="Show Table" id="mySubmit">
     
     </form>
-    <br>
+
+
     <br>
 
+    <table id="songTable"></table>
+
+    <br>
+
+    <h2>Click the button below to display the full lyrics.</h2>
     <form onsubmit="showMyLyrics(); return false">
         <input type = "submit" value="Show Full Lyrics" id="mySubmit">
         
         </form>
-    <br>
-    <br>
 
-    <table id="songTable"></table>
 
     <div>
         <p id = "lyricText">
