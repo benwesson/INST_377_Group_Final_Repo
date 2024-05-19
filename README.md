@@ -1,6 +1,16 @@
 # INST_377_Group_Final_Repo
+## Table of Contents
+- [Project Description](#project-description)
+- [Target Browsers](#target-browsers)
+- [Developer Manual](#developer-manual)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Running Tests](#running-tests)
+  - [API Documentation](#api-documentation)
+  - [Known Bugs](#known-bugs)
+  - [Roadmap for Future Development](#roadmap-for-future-development)
 
-## Description
+## Project Description 
 Our project gets the lyrics to your favorite songs! Enter a song name and an artist name to get started. Based on what you entered we will make an API to return you the lyrics to that song. Hit the Show lyrics button on the project Functionality page to see the whole lyrics printed out. The lyrics will also be played at the top of screen in a sing-a-long style slider. Our site also stores your recent seraches. Just hit the table button to see the last 5 songs you listened to. For clarification see the about page.
 
 ## Target Browsers
@@ -8,7 +18,7 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
 - Android
 - Chrome
 - Firefox
-
+- 
 ## Link to Developer Manual
 [Developer Manual](README.md)
 
@@ -34,39 +44,38 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
     npm install nodemon
     npm install @supabase/supabase-js
     npm install body-parser
-
-
     ```
+### Running the Application
+To start the project, use the following command:
 
-## Running the Application
-1. Start the server:
-    ```bash
-    npm init
+```sh
+  npm init
     Is this Ok? (yes) yes
-    npm start
-    ```
+  npm start
+```
 
-## API Documentation
-### GET /api/data
-- Retrieves data from the database.
-- Response example:
-    ```json
-    {
-        "data": "example"
-    }
-    ```
+### Running Tests
+To run tests, use:
 
-### POST /api/data
-- Writes data to the database or fetches and manipulates external data.
-- Request body example:
-    ```json
-    {
-        "key": "example"
-    }
-    ```
+```sh
+npm test
+```
+### API Documentation
+Here are the available API endpoints for the server application:
 
-## Known Bugs
-- List of known bugs.
+- **GET /api/items**: Fetch all items.
+- **POST /api/items**: Add a new item.
+  - Request Body: `{ "name": "Item Name", "description": "Item Description" }`
+- **PATCH /api/items/:id**: Update an existing item.
+  - Request Body: `{ "name": "Updated Name", "description": "Updated Description" }`
+- **DELETE /api/items/:id**: Delete an item by ID.
 
-## Future Development Roadmap
-- Roadmap for future development.
+### Known Bugs
+- Slider will occasionally display duplicate lyrics
+- slider will occasionally display extra divs
+
+### Roadmap for Future Development
+- Correct slider bugs
+- Add feature to link user to song music video
+- Develop manually controlable slider
+
