@@ -21,6 +21,7 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
 - Chrome
 - Firefox
 - 
+- 
 ## Link to Developer Manual
 [Developer Manual](README.md)
 
@@ -46,15 +47,50 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
     npm install nodemon
     npm install @supabase/supabase-js
     npm install body-parser
+    npm install express
+    npm install nodemon
+    npm install @supabase/supabase-js
+    npm install body-parser
     ```
+### Running the Application
+To start the project, use the following command:
 ### Running the Application
 To start the project, use the following command:
 
 ```sh
   npm init
+```sh
+  npm init
     Is this Ok? (yes) yes
   npm start
 ```
+  npm start
+```
+
+### Running Tests
+To run tests, use:
+
+```sh
+npm test
+```
+### API Documentation
+Here are the available API endpoints for the server application:
+
+- **GET /api/items**: Fetch all items.
+- **POST /api/items**: Add a new item.
+  - Request Body: `{ "name": "Item Name", "description": "Item Description" }`
+- **PATCH /api/items/:id**: Update an existing item.
+  - Request Body: `{ "name": "Updated Name", "description": "Updated Description" }`
+- **DELETE /api/items/:id**: Delete an item by ID.
+
+### Known Bugs
+- Slider will occasionally display duplicate lyrics
+- slider will occasionally display extra divs
+
+### Roadmap for Future Development
+- Correct slider bugs
+- Add feature to link user to song music video
+- Develop manually controlable slider
 
 ### Running Tests
 To run tests, use:
