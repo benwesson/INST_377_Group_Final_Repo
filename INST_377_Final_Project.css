@@ -1,0 +1,161 @@
+#bar {
+    text-align: center;
+}
+
+nav {
+    background-color: #2e7930;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #7fd186;
+}
+
+.heading-container {
+    text-align: center;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+}
+
+.form-submit {
+    font-family: 'Times New Roman';
+    background-color: #badef2;
+    border: 2px solid #1f3f5e;
+    border-radius: 30px;
+    box-shadow: #1b3c5a 4px 4px 0 0;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:active {
+    background-color: #22363f;
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+.team-member-info {
+    font-size: 24px;
+    color: #a4dfab;
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+
+  }
+
+#member {
+    background-color: #a4dfab;
+    border: 2px solid #1f3f5e;
+    border-radius: 30px;
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+}
+
+#devs {
+    text-align: center;
+}
+
+table { 
+    visibility: hidden;
+    background-color: #a4dfab;   
+}
+
+table, th, td {
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 10px;
+    
+  }
+
+table, td {
+    padding: 10px;
+    color:  white; 
+  } 
+
+#mySubmit {
+    font-family: 'Times New Roman';
+    background-color: #badef2;
+    border: 2px solid #1f3f5e;
+    border-radius: 30px;
+    box-shadow: #1b3c5a 4px 4px 0 0;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mySubmit:active {
+    background-color: #22363f;
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+#lyricText {
+    visibility: hidden;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+
+#button-container div {
+    margin: 10px;
+}
+
+#infoDiv {
+    background-color: #badef2;
+    border: 2px solid #1f3f5e;
+    box-shadow: #422800 2px 2px 0 0;
+    box-shadow: #1b3c5a 4px 4px 0 0;
+    border-radius: 30px;
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+}
