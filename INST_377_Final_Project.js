@@ -6,6 +6,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
 
@@ -15,8 +16,14 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabaseClient.createClient(supabaseURL, supabaseKey)
 
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    next();
+  });
+
+
 app.get('/spotifylyrics', async (req, res) => {
-    console.log('Attempting to GET all lyrics')
+    console.log('Attempting to GET all data')
 
 
     const {data, error } = await supabase
@@ -36,7 +43,6 @@ app.get('/spotifylyrics', async (req, res) => {
 )
 
 app.post('/spotifylyrics', async (req, res) => {
-console.log('posting');
     var ArtistName = req.body.ArtistName;
     var SongTitle = req.body.SongTitle;
 
