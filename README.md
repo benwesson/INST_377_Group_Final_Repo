@@ -9,8 +9,6 @@
   - [API Documentation](#api-documentation)
   - [Known Bugs](#known-bugs)
   - [Roadmap for Future Development](#roadmap-for-future-development)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Project Description 
@@ -69,4 +67,9 @@ Here are the available API endpoints for the server application:
 - **DELETE /api/items/:id**: Delete an item by ID.
 
 ### Known Bugs
+
+
+### Roadmap for Future Development
+
+## Contact
 
