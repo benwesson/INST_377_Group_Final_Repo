@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
 
 
 app.get('/spotifylyrics', async (req, res) => {
-    console.log('Attempting to GET all lyrics')
+    console.log('Attempting to GET all data')
 
 
     const {data, error } = await supabase
@@ -43,7 +43,6 @@ app.get('/spotifylyrics', async (req, res) => {
 )
 
 app.post('/spotifylyrics', async (req, res) => {
-console.log('posting');
     var ArtistName = req.body.ArtistName;
     var SongTitle = req.body.SongTitle;
 

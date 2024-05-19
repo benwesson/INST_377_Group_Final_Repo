@@ -38,10 +38,8 @@ async function getMostRecent() {
 
 
 async function sendData() {
-    console.log('data sender');
     let artistName = document.getElementById('artist').value;
     let songTitle = document.getElementById('song').value;
-    console.log(songTitle);
     const apiURL = 'http://localhost:3000/spotifylyrics'
     await fetch(apiURL, {
         method: 'POST',
@@ -55,7 +53,6 @@ async function sendData() {
  } ) 
  .then(response => response.json())
  .then(data => {
-    console.log(data);
  })
 }
 
