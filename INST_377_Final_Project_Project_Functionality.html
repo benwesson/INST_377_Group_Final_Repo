@@ -86,7 +86,7 @@
     
    
 
-    <p>Click the buttons below to either list the 5 most recently searched song lyrics or to display a song's full lyrics.</p>
+    <p>Click the buttons below to either list the 5 most recently searched song lyrics or display the full lyrics.</p>
 
     
     <form onsubmit="getMostRecent(); return false">
@@ -111,7 +111,15 @@
             
         </p>
     </div>
-
+  
+    <script>
+        typeItInstance = new TypeIt("#teamMemberInfo", {
+            strings: ["Enter an artist name and song title!"],
+            speed: 75,
+            loop: true,
+            cursorChar: '|'
+        }).go();
+    </script>
 
 </body>
 </html>
