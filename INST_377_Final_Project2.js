@@ -86,6 +86,8 @@ let mySplitString = myString.split("\n")
 let myArray = mySplitString
 console.log(myArray)
 
+document.getElementById("imageHolder").innerHTML = "";
+
 for (item in myArray) {
     let x = document.createElement("div")
     x.setAttribute("id", "mySlide")
@@ -103,11 +105,11 @@ for (item in myArray) {
 
 
 
-
-
 for (item in myArray) {
     
-    document.getElementById("lyricText").innerHTML += (myArray[item] + "<br>")
+    //document.getElementById("lyricText").innerHTML += (myArray[item] + "<br>")
+
+    document.getElementById("lyricText").innerHTML = myArray.join("<br>")
 
     
     //document.getElementById("images1").innerHTML += (myArray[0] + "<br>")
