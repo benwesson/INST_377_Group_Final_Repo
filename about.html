@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="INST377_apiTest.html">API Test</a></li>
+        </ul>
+    </nav>
+
+    <div class="heading-container">
+        <h2 style="font-size: 24px; color: #a4dfab;">Who do you want to know?</h2>
+        <h3 style="font-size: 24px; color: #a4dfab;">Or, learn more about our project</h3>
+        <input type="text" id="teamMemberInput">
+        <button class="form-submit" id="submitButton">Submit</button>
+    </div>
+
+    <div class="team-member-info">
+        <div id="teamMemberInfo"></div>
+    </div>
+
+    <div class="project-info">
+        <div id="projectInfo"></div>
+    </div>
+
+    <script>
+        let typeItInstance = new TypeIt("#teamMemberInfo", {
+            strings: ["Type in a name or 'project' to learn more."],
+            speed: 75,
+            loop: true,
+            cursorChar: '|'
+        }).go();
+
+        document.getElementById("submitButton").addEventListener("click", function () {
+            const inputName = document.getElementById("teamMemberInput").value;
+            const teamMemberInfo = document.getElementById("teamMemberInfo");
+            const projectInfo = document.getElementById("projectInfo");
+
+            if (inputName === 'project') {
+                fetch('project_info.txt')
+                    .then(response => response.text())
+                    .then(data => {
+                        projectInfo.innerHTML = data;
+                    });
+            } else {
+                fetch('team_members.txt')
+                    .then(response => response.text())
+                    .then(data => {
+                        if (teamMembers.hasOwnProperty(inputName)) {
+                            if (typeItInstance !== null) {
+                                typeItInstance.destroy();
+                            }
+                            teamMemberInfo.innerHTML = "";
+                            typeItInstance = new TypeIt("#teamMemberInfo", {
+                                strings: [teamMembers[inputName]],
+                                speed: 75,
+                                loop: false,
+                                cursorChar: '|'
+                            }).go();
+                        } else {
+                            teamMemberInfo.innerHTML = "";
+                            if (typeItInstance !== null) {
+                                typeItInstance.destroy();
+                            }
+                            typeItInstance = new TypeIt("#teamMemberInfo", {
+                                strings: ["No-can-do's-ville, babydoll."],
+                                speed: 75,
+                                loop: true,
+                                cursorChar: '|'
+                            }).go();
+                        }
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
