@@ -63,8 +63,6 @@ function showMyLyrics() {
 
 
 function getMyLyrics() {
-//const myArtist = "The Weeknd"
-//const mySongName = "Blinding Lights"
 const myArtist = document.getElementById("artist").value;
 const mySongName = document.getElementById("song").value;
 
@@ -72,19 +70,17 @@ const mySongName = document.getElementById("song").value;
 
 fetch(`https://api.lyrics.ovh/v1/${myArtist}/${mySongName}`)
 
-//document.getElementById("images1").appendChild("p").innerHTML = "hi"
 .then((res) => res.json())
 .then((data) => {
 
 
 console.log(data.lyrics)
 let myString = data.lyrics
-//let myTestString = myString.split("")
 let mySplitString = myString.split("\n")
-//document.getElementById("lyricText").innerHTML = myString
-//console.log(myString.split("\n"))
 let myArray = mySplitString
 console.log(myArray)
+
+document.getElementById("imageHolder").innerHTML = "";
 
 for (item in myArray) {
     let x = document.createElement("div")
@@ -94,23 +90,17 @@ for (item in myArray) {
     x.append(y)
     document.getElementById("imageHolder").append(x);
     
-}
-
-    
-    //document.getElementById("images0").innerHTML = myArray[1]
-    
-
-
+}    
 
 
 
 
 for (item in myArray) {
     
-    document.getElementById("lyricText").innerHTML += (myArray[item] + "<br>")
+
+    document.getElementById("lyricText").innerHTML = myArray.join("<br>")
 
     
-    //document.getElementById("images1").innerHTML += (myArray[0] + "<br>")
 }
 
 
