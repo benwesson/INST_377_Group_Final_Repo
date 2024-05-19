@@ -12,6 +12,7 @@
 - [Contact](#contact)
 
 ## Project Description 
+Our project gets the lyrics to your favorite songs! Enter a song name and an artist name to get started. Based on what you entered we will make an API to return you the lyrics to that song. Hit the Show lyrics button on the project Functionality page to see the whole lyrics printed out. The lyrics will also be played at the top of screen in a sing-a-long style slider. Our site also stores your recent seraches. Just hit the table button to see the last 5 songs you listened to. For clarification see the about page.
 
 ## Target Browsers
 - iOS
@@ -40,6 +41,10 @@
 3. Install dependencies:
     ```bash
     npm install
+    npm install express
+    npm install nodemon
+    npm install @supabase/supabase-js
+    npm install body-parser
     ```
 ### Running the Application
 To start the project, use the following command:
@@ -71,5 +76,4 @@ Here are the available API endpoints for the server application:
 
 ### Roadmap for Future Development
 
-## Contact
 
