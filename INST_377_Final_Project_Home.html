@@ -6,6 +6,7 @@
     <script src = "INST_377_Final_Project2.js" defer></script>
     
     <link rel="stylesheet" href="INST_377_Final_Project.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -46,12 +47,23 @@
     </style>
 </head>
 
-
 <body>
-    <header id = "bar">
-        <h1>Find My Song</h1>
+<header id="bar">
+        <h1 class="find-my">Find My Song</h1>
     </header>
-
+    <script src="https://unpkg.com/sheryjs/dist/Shery.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Shery.textAnimate(".find-my", {
+                style: 1,
+                y: 10,
+                delay: 0.1,
+                duration: 2,
+                ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+                multiplier: 0.1,
+            });
+        });
+    </script>
     <nav>
         <ul>
             <li><a href="INST_377_Final_Project_Home.html">Home</a></li>
