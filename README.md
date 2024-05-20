@@ -83,5 +83,5 @@ Here are the available API endpoints for the server application:
 ### Roadmap for Future Development
 - Correct slider bugs
 - Add feature to link user to song music video
-- Develop manually controlable slider
+- Develop manually controllable slider
 
