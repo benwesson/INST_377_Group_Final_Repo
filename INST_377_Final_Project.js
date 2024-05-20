@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
   });
 
 
-app.get('/api/spotifylyrics', async (req, res) => {
+app.get('/spotifylyrics', async (req, res) => {
     console.log('Attempting to GET all data')
 
 
@@ -42,7 +42,7 @@ app.get('/api/spotifylyrics', async (req, res) => {
 }
 )
 
-app.post('/api/spotifylyrics', async (req, res) => {
+app.post('/spotifylyrics', async (req, res) => {
     var ArtistName = req.body.ArtistName;
     var SongTitle = req.body.SongTitle;
 
