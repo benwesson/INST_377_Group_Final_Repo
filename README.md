@@ -79,7 +79,7 @@ Here are the available API endpoints for the server application:
 ### Known Bugs
 - Slider will occasionally display duplicate lyrics
 - Slider will occasionally display extra divs
-- Unable to send data to supabase database or receive data from supabase database when app is deployed using Vercel
+- Unable to send data to supabase database or receive data from supabase database when app is deployed using Vercel. However, data can be sent to supabase database or received from supabase database locally.
 
 ### Roadmap for Future Development
 - Correct slider bugs
