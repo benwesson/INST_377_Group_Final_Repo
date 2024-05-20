@@ -1,5 +1,5 @@
 {
-  "version: 1,
+  "version: 2,
 "builds": [
   {
     "src": "INST_377_Final_Project2.js",
