@@ -85,5 +85,5 @@ Here are the available API endpoints for the server application:
 - Correct slider bugs
 - Add feature to link user to song music video
 - Develop manually controllable slider
-- Fix errors when sending or receiving data when the app is deployed using Vercel
+- Fix errors when sending data to supabase database or receiving data from supabase database when the app is deployed using Vercel
 
