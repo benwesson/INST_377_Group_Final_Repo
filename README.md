@@ -45,7 +45,6 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
     ```
 3. Install dependencies:
     ```bash
-    npm install
     npm install express
     npm install nodemon
     npm install @supabase/supabase-js
