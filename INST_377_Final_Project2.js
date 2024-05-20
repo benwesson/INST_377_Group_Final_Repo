@@ -5,6 +5,7 @@ async function getMostRecent() {
     //const apiURL = 'https://inst-377-group-final-repo-lyart.vercel.app'
     //await fetch(apiURL)
     var host = window.location.origin;
+    console.log(host);
     await fetch(`${host}/spotifylyrics`)
     .then((response) => response.json())
     .then((data) => {
