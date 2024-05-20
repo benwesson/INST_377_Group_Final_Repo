@@ -53,8 +53,6 @@ Our project gets the lyrics to your favorite songs! Enter a song name and an art
     ```
 ### Running the Application
 To start the project, use the following command:
-### Running the Application
-To start the project, use the following command:
 
 ```sh
   npm init
