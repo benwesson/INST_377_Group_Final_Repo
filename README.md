@@ -79,9 +79,11 @@ Here are the available API endpoints for the server application:
 ### Known Bugs
 - Slider will occasionally display duplicate lyrics
 - Slider will occasionally display extra divs
+- Unable to send data to supabase database or receive data from supabase database when app is deployed using Vercel
 
 ### Roadmap for Future Development
 - Correct slider bugs
 - Add feature to link user to song music video
 - Develop manually controllable slider
+- Fix errors when sending or receiving data when the app is deployed using Vercel
 
