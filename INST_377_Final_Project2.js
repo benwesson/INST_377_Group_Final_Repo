@@ -1,12 +1,8 @@
 async function getMostRecent() {
     
     //const apiURL = 'http://localhost:3000/spotifylyrics'
-    //const apiURL = 'https://inst-377-group-final-repo-lyart.vercel.app/spotifylyrics'
-    //const apiURL = 'https://inst-377-group-final-repo-lyart.vercel.app'
-    //await fetch(apiURL)
-    var host = window.location.origin;
-    console.log(host);
-    await fetch(`${host}/spotifylyrics`)
+    const apiURL = 'https://inst-377-group-final-repo-lyart.vercel.app/spotifylyrics'
+    await fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
     console.log(data);
@@ -47,7 +43,8 @@ async function getMostRecent() {
 async function sendData() {
     let artistName = document.getElementById('artist').value;
     let songTitle = document.getElementById('song').value;
-    const apiURL = 'http://localhost:3000/spotifylyrics'
+    //const apiURL = 'http://localhost:3000/spotifylyrics'
+    const apiURL = 'https://inst-377-group-final-repo-lyart.vercel.app/spotifylyrics'
     await fetch(apiURL, {
         method: 'POST',
  body: JSON.stringify({
