@@ -81,7 +81,7 @@ Here are the available API endpoints for the server application:
 
 ### Known Bugs
 - Slider will occasionally display duplicate lyrics
-- slider will occasionally display extra divs
+- Slider will occasionally display extra divs
 
 ### Roadmap for Future Development
 - Correct slider bugs
