@@ -5,6 +5,7 @@ async function getMostRecent() {
     await fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
+    console.log(data);
     let dataLength = data.length;
     const songTable = document.getElementById('songTable'); 
 
