@@ -1,6 +1,7 @@
 async function getMostRecent() {
     
-    const apiURL = 'http://localhost:3000/spotifylyrics'
+    //const apiURL = 'http://localhost:3000/spotifylyrics'
+    const apiURL = 'https://inst-377-group-final-repo-woad.vercel.app/'
     await fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
